@@ -15,5 +15,7 @@
 //= require bootstrap
 //= require underscore
 //= require backbone
-//= require_tree .
+//= require library
 //= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./
