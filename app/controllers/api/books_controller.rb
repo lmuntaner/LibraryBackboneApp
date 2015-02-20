@@ -1,4 +1,10 @@
 class Api::BooksController < ApplicationController
+
+  def index    
+    @books = Book.all
+    render :json => @books
+  end
+  
   def create
     @book = Book.new(self.book_params)
     if @book.save
@@ -12,11 +18,6 @@ class Api::BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.destroy!
     render :json => @book
-  end
-
-  def index
-    @books = Book.all
-    render :json => @books
   end
 
   def show
