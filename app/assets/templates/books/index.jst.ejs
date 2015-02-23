@@ -1,7 +1,9 @@
 <ul>
 	<% books.each(function (book) { %>
-		<li><%= book.get('title') %></li>
+		<li>
+			<a href="#/books/<%= book.id %>"><%= book.get('title') %></a>
+		</li>
 	<% }) %>
 </ul>
 
-<button class="btn btn-primary btn-sm">Do something</button>
+<a href="#/books/new">Create new book</a>
